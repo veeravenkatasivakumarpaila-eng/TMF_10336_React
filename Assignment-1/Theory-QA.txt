@@ -1,0 +1,72 @@
+//Questions//
+• What is Emmet?
+• Difference between a Library and Framework?
+• VVhat is CDN? Why do we use it?
+• Why is React known as React?
+• What is crossorigin in the script tag?
+• What is the difference between and ReactDOM
+• What is difference between react-developrnent.js and react-production. js files via CDN?
+
+//Solutions//
+1. Emmet: It is a plugin/shortcut syntax used in HTML, CSS and JSX text formats for the usage of short abbreviations that expand into a full snippet of code with a key stroke.
+By default it is not enabled in vscode, it should be enabled by altering the vscode setting.json file by adding the following lines
+"emmet.includeLanguages": {
+  "javascript": "javascriptreact",
+  "typescript": "typescriptreact"
+}
+
+
+2.
+Library: 
+A library is a collection of reusable code we can call when needed.
+Libraries are typically designed to offer reusable functionality for specific, focused tasks.
+Libraries are often easier to integrate into existing projects and can be easily swapped out for alternatives if needed
+Example: React.js , Three.js
+
+
+Framework: It is a complete structure or skeleton of the application.
+In a framework, the framework itself controls the overall flow of the application.
+Frameworks typically enforce a certain architectural pattern and set of conventions, guiding how you organize your code.
+Example: Spring MVC, AngularJS
+
+3. CDN:
+CDN stands for Content Delivery Network.
+It’s a network of servers distributed across different geographic locations that deliver web content (like images, JavaScript, CSS, videos, etc.) to users faster and more reliably.
+When you include React or Bootstrap in your project, you can use a CDN link instead of downloading the file locally.
+Example:
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+4. The name “React” is chosen because it was meant to help the developers to build user interfaces that are fast and responsive which are reactive. The library was designed to react to the changes in the data.
+React utilizes a "Virtual DOM" to achieve efficient updates. Instead of directly manipulating the browser's DOM for every change, React first calculates the differences between the current and desired UI in a lightweight virtual representation.
+
+5. 
+The crossorigin attribute tells the browser how to handle cross-origin requests (when you load a script from a different domain).
+
+Example: 
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+
+In other cases a browser extension can be installed to allow the cross origin scripts.
+Example:
+Allow CORS extension.
+
+
+6. 
+react: 
+React is the core library for building user interfaces. It provides the foundational features for defining components, managing state, and handling the virtual DOM (Document Object Model).
+React is used to create components and manage their logic, but it doesn’t directly interact with the browser’s DOM.
+
+react-dom: 
+react-dom is the bridge between React and the browser’s DOM. It provides methods to render React components into the actual DOM and manage browser-specific features.
+react-dom is used to actually display your React components in a web browser.
+
+7. 
+react.developement.js:
+It is designed for development and debugging.
+It includes helpful warnings and error messages in the console to catch common mistakes (e.g., missing keys in lists, incorrect prop types).
+It is larger in file size due to additional checks and logging.
+It is only used during development and is never used in production, as it slows down your app and exposes unnecessary details.
+react.production.js:
+It is optimized for production use.
+It is a minified and compressed version for faster loading which strips out all development warnings and error messages. It is smaller in file size, improving performance. The code is unclear and harder to read (for security and performance).
+This version is always used in production to ensure optimal performance and security
