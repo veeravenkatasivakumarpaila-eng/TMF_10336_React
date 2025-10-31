@@ -1,0 +1,45 @@
+1. 
+JSX is a syntax extension for javascript, most commonly used with React.
+It allows you to write HTML- like code within JavaScript, making it easier to create and manage UI components.
+Browsers do not understand JSX directly, tools like babel convert JSX into regular JavaScript function calls.
+JSX is widely adopted to use React because it makes the code intuitive and easier to maintain.
+
+2.
+The main functions of the JSX are:
+a. 
+JSX makes the UI more straightforward like a HTML syntax, instead of manipulating the DOM , the UI state is declared first and the react updates the DOM efficiently.
+b.
+Any javascript expression can be embedded inside JSX using curly braces{}.
+This allows dynamic rendering, conditional logic and looping directly in the markup.
+
+
+c.
+JSX works smoothly with tools like babel, which enables features like linting, transpilation, and bundling, making development smoother and more efficient.
+
+d.
+JSX allows the creation of complex UI logic in a concise and expressive way, where features like fragments, spread attributes and custom components are written for any UI need.
+
+3.
+The type attribute in the script tag specifies the browser how to interpret or execute the script.
+The type attribute helps the browser understand the type of script and depending on the value, the browser may execute the script differently or not at all.
+Example:
+type = “module”
+Specifies that the script is in ECMA-Script Module(enables import and export).
+type = “text/babel”
+Used for scripts that need to be transpiled by babel.
+
+4.
+{TitleComponent}
+It is not a valid JSX syntax for rendering a component. The {} braces are used for writing a JavaScript expression inside a JSX code.
+
+{<TitleComponent/>}
+This is a self closing syntax for rendering a component.
+It is used when the component does not have children.
+This syntax is equivalent to <TitleComponent><TitleComponent/> when there are no children.
+Eg:
+return <TitleComponent />;
+
+{<TitleComponent> </TitleComponent>}
+This is the explicit opening and closing tag syntax. It is used when the component has children(content between the tags).
+Eg:
+return <TitleComponent>Children content</TitleComponent>.
